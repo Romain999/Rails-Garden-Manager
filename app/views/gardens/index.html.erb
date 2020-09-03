@@ -1,14 +1,14 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(<%= image_path('home_banner.jpg') %>)">
   <div class="container">
-    <h1>My Garden Manager</h1>
-    <p>Manage, Cultivate and Grow your Garden and your Experience</p>
+    <h1>Mon Jardin</h1>
+    <p>Gères tes jardins, ajoute des plantes et regarde les grandir</p>
     <%= link_to "Discover", "#how", class: "btn btn-flat" %>
   </div>
 </div>
 
 <div class="container">
   <div class="section">
-    <h2 id="how" class="text-center">How does it work?</h2>
+    <h2 id="how" class="text-center">Comment ça marche?</h2>
     <div class="row">
       <div class="col-xs-12 col-md-6 col-lg-4">
         <%= link_to new_garden_path do %>
@@ -16,7 +16,7 @@
             <%= image_tag "garden.svg" %>
           </div>
         <% end %>
-        <p class="text-center fs-24">Create your garden</p>
+        <p class="text-center fs-24">Crée ton jardin</p>
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
         <%= link_to new_garden_path do %>
@@ -24,7 +24,7 @@
             <%= image_tag "circles.svg" %>
           </div>
         <% end %>
-        <p class="text-center fs-24">Add your plants</p>
+        <p class="text-center fs-24">Ajoute une plante</p>
       </div>
       <div class="col-xs-12 col-md-6 col-lg-4">
         <%= link_to new_garden_path do %>
@@ -32,12 +32,12 @@
             <%= image_tag "watering.svg" %>
           </div>
         <% end %>
-        <p class="text-center fs-24">Manage your daily activity</p>
+        <p class="text-center fs-24">Gère ton activité quotidienne</p>
       </div>
     </div>
   </div>
   <div class="section">
-    <h2 class="text-center">Our Community Best Gardens</h2>
+    <h2 class="text-center">Notre communauté des plus beaux jardins</h2>
     <div class="cards">
       <% @gardens.each do |garden| %>
         <%= render "garden_card", garden: garden %>
