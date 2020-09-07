@@ -1,6 +1,7 @@
 .navbar-lewagon {
+  width: 100vw;
   justify-content: space-between;
-  background: transparent;
+  background: white;
   position: fixed;
   top: 0;
 }
@@ -25,4 +26,8 @@
 .logo:hover {
   background: #1BCB7F;
   transition: background 0.3s ease;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
 }

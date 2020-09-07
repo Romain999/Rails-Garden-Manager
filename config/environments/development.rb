@@ -1,5 +1,9 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+  if Rails.env.development?
+    config.action_mailer.default_url_options = { host: "http://localhost:3000" }
+  else
+    config.action_mailer.default_url_options = { host: "https://www.annejardin.com" }
+  end
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

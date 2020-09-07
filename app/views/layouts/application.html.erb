@@ -27,6 +27,9 @@
     <div class="content">
       <%= yield %>
     </div>
+    <%= render 'shared/flashes' %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= render "shared/footer" %>
     <!-- WARNING: DO NOT DELETE THE LINE BELOW -->
     <div id="rails-garden-manager-watermark"></div>

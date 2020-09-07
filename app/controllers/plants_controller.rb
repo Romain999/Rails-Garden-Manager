@@ -1,4 +1,6 @@
 class PlantsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def create
     @garden = Garden.find(params[:garden_id])
     @plant = Plant.new(plant_params)

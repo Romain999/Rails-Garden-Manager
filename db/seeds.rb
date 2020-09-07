@@ -12,6 +12,7 @@ garden_names = [
 garden_names.each do |garden_name|
   garden_request = RestClient.get("https://source.unsplash.com/1200x700/?garden")
   garden = Garden.new(
+      price_cents: 950,
       name: garden_name,
       banner_url: garden_request.request.url
     )
