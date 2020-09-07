@@ -5,10 +5,6 @@
       <div>
         <h2><%= garden.name %></h2>
         <p>Montant: <%= humanized_money_with_symbol(garden.price) %></p>
-        <%= form_tag orders_path do %>
-          <%= hidden_field_tag 'garden_id', garden.id %>
-          <%= submit_tag 'Acheter', class: 'btn btn-primary' %>
-        <% end %>
       </div>
     </div>
   </div>

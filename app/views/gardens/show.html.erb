@@ -1,7 +1,13 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= @garden.banner_url %>');">
   <div class="container">
     <h1><%= @garden.name %></h1>
+    <h1>Montant: <%= humanized_money_with_symbol(@garden.price) %></h1>
+    <%= form_tag orders_path do %>
+      <%= hidden_field_tag 'garden_id', @garden.id %>
+      <%= submit_tag 'Acheter', class: 'btn btn-primary' %>
+    <% end %>
   </div>
+
 </div>
 
 <div class="pt-30 container">
