@@ -21,6 +21,7 @@ gem "rack", ">= 2.0.8"
 gem 'devise'
 gem 'money-rails'
 gem 'stripe'
+gem 'stripe_event'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

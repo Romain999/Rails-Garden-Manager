@@ -1,12 +1,12 @@
 class OrdersController < ApplicationController
   def create
     garden = Garden.find(params[:garden_id])
-    order  = Order.create!(garden: garden, garden_sku: garden.sku, amount: garden.price, state: 'pending', user: current_user)
+    order  = Order.create!(garden: garden, garden_sku: garden.name, amount: garden.price, state: 'pending', user: current_user)
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [{
-        name: garden.sku,
+        name: garden.name,
         images: [garden.banner_url],
         amount: garden.price_cents,
         currency: 'eur',
